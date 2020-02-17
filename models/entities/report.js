@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
       id: {
         type: DataTypes.INTEGER(11),
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       type: {
         type: DataTypes.STRING(45),
@@ -15,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER(11),
         allowNull: false,
         references: {
-          model: 'matchinglog',
+          model: 'matchingLog',
           key: 'id'
         }
       },
@@ -40,7 +41,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },
       image: {
-        type: DataTypes.STRING(45),
+        type: DataTypes.STRING(200),
         allowNull: false
       }
     },

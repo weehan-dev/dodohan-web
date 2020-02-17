@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
       id: {
         type: DataTypes.INTEGER(11),
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       weehanId: {
         type: DataTypes.STRING(45),
@@ -13,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
         unique: true
       },
       gender: {
-        type: DataTypes.STRING(1),
+        type: DataTypes.ENUM('f', 'm'),
         allowNull: false
       },
       birth: {
-        type: DataTypes.INTEGER(11),
+        type: DataTypes.INTEGER(4),
         allowNull: false
       },
       email: {
@@ -30,15 +31,15 @@ module.exports = function(sequelize, DataTypes) {
         unique: true
       },
       height: {
-        type: DataTypes.INTEGER(11),
+        type: DataTypes.INTEGER(3),
         allowNull: false
       },
       bodyType: {
-        type: DataTypes.STRING(45),
+        type: DataTypes.ENUM('light', 'middle', 'heavy'),
         allowNull: false
       },
       smoking: {
-        type: DataTypes.INTEGER(4),
+        type: DataTypes.BOOLEAN,
         allowNull: false
       },
       major: {

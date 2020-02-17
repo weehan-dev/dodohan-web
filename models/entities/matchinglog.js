@@ -1,11 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define(
-    'matchinglog',
+    'matchingLog',
     {
       id: {
         type: DataTypes.INTEGER(11),
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       womanTeam: {
         type: DataTypes.STRING(100),
@@ -21,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     {
-      tableName: 'matchinglog'
+      tableName: 'matchingLog'
     }
   )
 }
