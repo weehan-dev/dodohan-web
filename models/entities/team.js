@@ -30,7 +30,8 @@ module.exports = function(sequelize, DataTypes) {
       },
       isMatching: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: false,
+        defaultValue: '0'
       },
       teamType: {
         type: DataTypes.INTEGER(4),

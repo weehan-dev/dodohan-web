@@ -25,6 +25,7 @@ db.Team = require('../models/entities/team')(sequelize, Sequelize)
 db.Report = require('../models/entities/report')(sequelize, Sequelize)
 db.MatchingLog = require('../models/entities/matchingLog')(sequelize, Sequelize)
 
+db.Team.hasMany(db.User, { foreignKey: 'team', sourceKey: 'id' })
 db.User.belongsToMany(db.MatchingLog, {
   through: 'warningForMan',
   foreignKey: 'manId'

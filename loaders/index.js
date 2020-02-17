@@ -4,7 +4,7 @@ const expressLoader = require('./expressLoader')
 const loaders = async app => {
   console.log('로더 실행')
   await dbLoader
-    .sync()
+    .authenticate()
     .then(() => {
       console.log('DB 연결 완료')
     })
